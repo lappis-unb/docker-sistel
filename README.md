@@ -10,3 +10,7 @@ Dockerfile e afins do container do sistel
 ## Conexão com bancos
 
 Atualmente estamos adicionando um host local.db que aponta para outro container com o banco de dados, para mudar o ip basta editar o arquivos src/addHosts.sh
+
+## Log
+
+localização do log dentro do container: /opt/jboss/wildfly/standalone/log/server.log
