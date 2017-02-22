@@ -17,7 +17,7 @@ EXPOSE 8080
 #CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
 
 # habilitar caso queira adicionar o arquivo na mao, ao invés de mapear o volume (bom para CIs etc)
-ADD ./workspace/Build-Sistel-hmg-mvn/target/Sistel.war /opt/jboss/wildfly/standalone/deployments/
+ADD ../workspace/Build-Sistel-hmg-mvn/target/Sistel.war /opt/jboss/wildfly/standalone/deployments/
 
 # mapeamento de volume fracassado
 #VOLUME ["/home/chris/projetos/docker-sistel/war" , "/opt/jboss/wildfly/standalone/deployments/"]
