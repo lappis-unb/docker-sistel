@@ -11,7 +11,7 @@ Obs: as variáveis de ambiente acima precisam ser definidas, ENVDB = host do ban
 
 ## Conexão com bancos
 
-Atualmente estamos adicionando um host local.db que aponta para outro container com o banco de dados, para mudar o ip basta editar o arquivos src/addHosts.sh
+Atualmente basta setar a variável ENVDB com o ip ou o nome do host, lembrando que se for o nome, ainda será necessário adicionar o mapeamento de host no arquivo src/addHosts.sh
 
 ## Log
 
