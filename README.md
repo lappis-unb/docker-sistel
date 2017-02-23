@@ -5,7 +5,9 @@ Dockerfile e afins do container do sistel
 
 1. docker build .
 
-2. docker run -it -p 8080:8080 -v DIRETORIO-WAR:/opt/jboss/wildfly/standalone/deployments/ IDIMAGEM
+2. docker run -it --name sistel -p 80:8080 -e ENVDB=$ENVDB -e USERDB=$USERDB -e PASSDB=$PASSDB -e USERLDAP=$USERLDAP -e PASSLDAP=$PASSLDAP -v DIRETORIO-WAR:/opt/jboss/wildfly/standalone/deployments/ IDIMAGEM
+
+Obs: as variáveis de ambiente acima precisam ser definidas, ENVDB = host do banco de dados
 
 ## Conexão com bancos
 
