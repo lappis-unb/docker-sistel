@@ -9,7 +9,7 @@ docker build -t sistel .
 ```
 2. Rode o container à partir da imagem sistel (container vai chamar sistel também)
 ```
-docker run -it --name sistel -p 80:8080 -e ENVDB=$ENVDB -e USERDB=$USERDB -e PASSDB=$PASSDB -e USERLDAP=$USERLDAP -e PASSLDAP=$PASSLDAP -e ENVMAILHOST=$ENVMAILHOST -e ENVMAILPORT=$ENVMAILPORT -e ENVMAILPROTOCOL=$ENVMAILPROTOCOL -e ENVSMTPAUTH=$ENVSMTPAUTH -e ENVTLSENABLE=$ENVTLSENABLE -e ENVMAILDEBUG=$ENVMAILDEBUG -e ENVMAILTIMEOUT=$ENVMAILTIMEOUT -v /home/chris/proj/docker-sistel/war:/opt/jboss/wildfly/standalone/deployments/ sistel
+docker run -it --name sistel -p 80:8080 -e ENVDB=$ENVDB -e USERDB=$USERDB -e PASSDB=$PASSDB -e USERLDAP=$USERLDAP -e PASSLDAP=$PASSLDAP -e ENVMAILHOST=$ENVMAILHOST -e ENVMAILPORT=$ENVMAILPORT -e ENVMAILPROTOCOL=$ENVMAILPROTOCOL -e ENVSMTPAUTH=$ENVSMTPAUTH -e ENVTLSENABLE=$ENVTLSENABLE -e ENVMAILDEBUG=$ENVMAILDEBUG -e ENVMAILTIMEOUT=$ENVMAILTIMEOUT -v [DIRETORIO-WAR]:/opt/jboss/wildfly/standalone/deployments/ sistel
 ```
 
 Obs: as variáveis de ambiente acima precisam ser definidas, ENVDB = host do banco de dados
