@@ -1,23 +1,25 @@
-version: '3'
+version: '2'
 services:
-	sistel-web:
-		build: .
-		container-name: sistel-web
-		ports:
-		 - "80:8080"
-		environment:
-	   - ENVDB=$ENVDB 
-	   - USERDB=postgres
-	   - PASSDB=root
-	   - URLLDAP=$URLLDAP 
-	   - LDAPBASE=$LDAPBASE 
-	   - USERLDAPDN=$USERLDAPDN 
-	   - USERLDAP=$USERLDAP 
-	   - PASSLDAP=$PASSLDAP 
-	   - ENVMAILHOST=$ENVMAILHOST 
-	   - ENVMAILPORT=$ENVMAILPORT 
-	   - ENVMAILPROTOCOL=$ENVMAILPROTOCOL 
-	   - ENVSMTPAUTH=$ENVSMTPAUTH 
-	   - ENVTLSENABLE=$ENVTLSENABLE 
-	   - ENVMAILDEBUG=$ENVMAILDEBUG 
-	   - ENVMAILTIMEOUT=$ENVMAILTIMEOUT
+  web:
+    build: .
+    container_name: sistel-web
+    ports:
+      - "80:8080"
+    environment:
+      - ENVDB=$ENVDB 
+      - USERDB=postgres
+      - PASSDB=root
+      - URLLDAP=$URLLDAP 
+      - LDAPBASE=$LDAPBASE 
+      - USERLDAPDN=$USERLDAPDN 
+      - USERLDAP=$USERLDAP 
+      - PASSLDAP=$PASSLDAP 
+      - ENVMAILHOST=$ENVMAILHOST 
+      - ENVMAILPORT=$ENVMAILPORT 
+      - ENVMAILPROTOCOL=$ENVMAILPROTOCOL 
+      - ENVSMTPAUTH=$ENVSMTPAUTH 
+      - ENVTLSENABLE=$ENVTLSENABLE 
+      - ENVMAILDEBUG=$ENVMAILDEBUG 
+      - ENVMAILTIMEOUT=$ENVMAILTIMEOUT
+    volumes:
+      - "./:/opt/jboss/wildfly/standalone/deployments/"
