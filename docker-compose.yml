@@ -23,9 +23,11 @@ services:
       - ENVMAILTIMEOUT=$ENVMAILTIMEOUT
     volumes:
       - "./:/opt/jboss/wildfly/standalone/deployments/"
+    links:
+      - postgres
   postgres:
     container_name: postgres
-    image: "postgres:9.6"
+    image: postgres:9.6
     volumes:
       - .:/code
     ports:
