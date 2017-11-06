@@ -32,7 +32,7 @@ localização do log dentro do container: /opt/jboss/wildfly/standalone/log/serv
 
 O arquivo war da aplicação devera ser movido para a pasta compartilhada com a /opt/jboss/wildfly/standalone/deployments/
 
-## Variavéis de ambiente listadas a baixo:
+## Variavéis de ambiente
 
   1. Banco de Dados (Local/Docker)
 
