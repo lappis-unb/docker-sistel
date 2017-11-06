@@ -93,7 +93,7 @@ O arquivo war da aplicação devera ser movido para a pasta compartilhada com a 
        LDAPUSERSEARCHFILTER= XXXXXXXXXXXX
        LDAPUSERSEARCHBASE= XXXXXXXXXXXX
       
-###Configurar o SEI (Sistema Eletrônico de Informação) para comunicação via WEBSERVICE:
+### Configurar o SEI (Sistema Eletrônico de Informação) para comunicação via WEBSERVICE:
 
     1. Operações requisitadas
         -Gerar Procedimento
