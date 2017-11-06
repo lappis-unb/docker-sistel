@@ -3,7 +3,7 @@ Dockerfile e afins do container do sistel
 
 ## Como rodar
 
-1. Construa a imagem do docker, chame ela de sistel :D
+1. Construa a imagem do docker, chame ela de sistel
 ```
 docker build -t sistel .
 ```
@@ -36,14 +36,14 @@ O arquivo war da aplicação devera ser movido para a pasta compartilhada com a 
 
   1. Banco de Dados (Local/Docker)
 
-    1.1 Chamada arquivo application.propreties
+    1.1 Chamada arquivo application.properties
   
       1.1.1 Mysql
         spring.datasource.url= jdbc:mysql://${ENVDB}:3306/dbditel
         spring.datasource.username= ${USERDB}
         spring.datasource.password= ${PASSDB}
 
-      1.1.2 Postegres
+      1.1.2 Postgres
         spring.datasource.driver-class-name= org.postgresql.Driver
         spring.datasource.url= jdbc:postgresql://${ENVDB}:5432/dbditel
         spring.datasource.username= ${USERDB}
@@ -56,7 +56,7 @@ O arquivo war da aplicação devera ser movido para a pasta compartilhada com a 
 
   2. Serviço Email
 
-    2.1 Chamada arquivo application.propreties
+    2.1 Chamada arquivo application.properties
       email.host= ${ENVMAILHOST}
       email.port= ${ENVMAILPORT}
       email.protocol= ${ENVMAILPROTOCOL}
@@ -76,8 +76,7 @@ O arquivo war da aplicação devera ser movido para a pasta compartilhada com a 
 
 3. LDAP(Configuração de Autenticação e consulta)*
 
-  3.1 Chamada arquivo application.propreties
-  
+  3.1 Chamada arquivo application.properties
       ldap.userDn= ${LDAPUSERDN}
       ldap.passDn= ${LDAPPASS}
       ldap.url= ${LDAPURL}
@@ -86,7 +85,6 @@ O arquivo war da aplicação devera ser movido para a pasta compartilhada com a 
       ldap.user.search.base= ${LDAPUSERSEARCHBASE}
 
  3.2 Variáveis ambiente
- 
        LDAPUSER= Usuario de login
        LDAPPASS= Senha 
        LDAPUSERDN= CN=Usuariologin,OU=XXXXX,OU=YYYYY,OU=ZZZZZ
@@ -110,7 +108,7 @@ O arquivo war da aplicação devera ser movido para a pasta compartilhada com a 
         -Documento de Bloco
         -Cancelar Disponibilização de Bloco
 
-    2. Chamada arquivo application.propreties
+    2. Chamada arquivo application.properties
        sei.sistema= ${SEISISTEMA}
        sei.servico= ${SEISERVICO}
 
