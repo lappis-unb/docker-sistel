@@ -74,24 +74,24 @@ O arquivo war da aplicação devera ser movido para a pasta compartilhada com a 
       ENVMAILDEBUG= false
       ENVMAILTIMEOUT= 50000
 
-3. LDAP(Configuração de Autenticação e consulta)*
+ 3. LDAP(Configuração de Autenticação e consulta)
+ 
+        3.1 Chamada arquivo application.properties
+            ldap.userDn= ${LDAPUSERDN}
+            ldap.passDn= ${LDAPPASS}
+            ldap.url= ${LDAPURL}
+            ldap.base= ${LDAPBASE}
+            ldap.user.search.filter= ${LDAPUSERSEARCHFILTER}
+            ldap.user.search.base= ${LDAPUSERSEARCHBASE}
 
-  3.1 Chamada arquivo application.properties
-      ldap.userDn= ${LDAPUSERDN}
-      ldap.passDn= ${LDAPPASS}
-      ldap.url= ${LDAPURL}
-      ldap.base= ${LDAPBASE}
-      ldap.user.search.filter= ${LDAPUSERSEARCHFILTER}
-      ldap.user.search.base= ${LDAPUSERSEARCHBASE}
-
- 3.2 Variáveis ambiente
-       LDAPUSER= Usuario de login
-       LDAPPASS= Senha 
-       LDAPUSERDN= CN=Usuariologin,OU=XXXXX,OU=YYYYY,OU=ZZZZZ
-       LDAPURL= ldap://000.000.000:389
-       LDAPBASE= DC=XXXXX,DC = XXXX
-       LDAPUSERSEARCHFILTER= XXXXXXXXXXXX
-       LDAPUSERSEARCHBASE= XXXXXXXXXXXX
+        3.2 Variáveis ambiente
+       	    LDAPUSER= Usuario de login
+            LDAPPASS= Senha 
+            LDAPUSERDN= CN=Usuariologin,OU=XXXXX,OU=YYYYY,OU=ZZZZZ
+            LDAPURL= ldap://000.000.000:389
+            LDAPBASE= DC=XXXXX,DC = XXXX
+            LDAPUSERSEARCHFILTER= XXXXXXXXXXXX
+            LDAPUSERSEARCHBASE= XXXXXXXXXXXX
       
 ### Configurar o SEI (Sistema Eletrônico de Informação) para comunicação via WEBSERVICE:
 
