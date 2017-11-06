@@ -7,7 +7,9 @@ Dockerfile e afins do container do sistel
 ```
 docker build -t sistel .
 ```
-2. Rode o container à partir da imagem sistel (container vai chamar sistel também)
+2. Configure as variavéis de ambiente(Listadas a baixo) e crie as pastas para o LOG, WAR e as Faturas.
+
+3. Rode o container à partir da imagem sistel (container vai chamar sistel também)
 ```
 docker run -id --name sistel -p 80:8080 -e ENVDB=$ENVDB -e USERDB=$USERDB -e PASSDB=$PASSDB -e LDAPURL=$LDAPURL -e LDAPBASE=$LDAPBASE -e LDAPUSERDN=$LDAPUSERDN -e LDAPPASS=$LDAPPASS -e LDAPUSERSEARCHBASE=$LDAPUSERSEARCHBASE -e LDAPUSERSEARCHFILTER=$LDAPUSERSEARCHFILTER -e ENVMAILHOST=$ENVMAILHOST -e ENVMAILPORT=$ENVMAILPORT -e ENVMAILPROTOCOL=$ENVMAILPROTOCOL -e ENVSMTPAUTH=$ENVSMTPAUTH -e ENVTLSENABLE=$ENVTLSENABLE -e ENVMAILDEBUG=$ENVMAILDEBUG -e ENVMAILTIMEOUT=$ENVMAILTIMEOUT -e SEISERVICO=$SEISERVICO -e SEISISTEMA=$SEISISTEMA -e SEIURL=$SEIURL -v [Pasta para WAR]:/opt/jboss/wildfly/standalone/deployments/ -v [Pasta para as Faturas Carregadas]:/opt/jboss/upload-dir/ -v [Pasta para LOG]:/opt/jboss/wildfly/standalone/log/   sistel:$GIT_COMMIT
 ```
